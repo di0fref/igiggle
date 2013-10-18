@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>iGoogle like COMPLETE EXAMPLE by Mario Jimenez v2</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>
+        <link href="inettuts.css" rel="stylesheet" type="text/css" />
+		<link href="rss.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			$('<style type="text/css">.column{visibility:hidden;}</style>').appendTo('head');
+        
+			function AddWidget(){	
+				var i=1;
+				while ($("#widget"+i).length>0) i++;
+				var dialog = $("#dialog");
+				dialog.dialog({
+					modal:true,
+					autoOpen:true,
+					width:350,
+					height:200,
+					buttons:{
+						OK: function(){
+							$.ajax({
+								url: "addWidget.php",
+								dataType: "json",
+								async: false,
+								data:{
+									title: $("#title").val(),
+									url: $("#url").val(),
+									id: "widget" + i
+								},
+								success: function(response){
+									if(response.message == true){
+										iNettuts.addWidget("#column1", {
+											id: "widget"+i,
+											color: "color-white",
+											title: $("#title").val()
+										});
+										dialog.dialog("close");
+									}
+									else{
+										dialog.append(response.message);
+									}
+								}
+							});
+						},
+						Cancel: function(){
+							dialog.dialog("close");
+						}
+					}
+				});
+			
+	
+			}
+			function Add() {
+				var i=1;
+				while ($("#widget"+i).length>0) i++;
+				console.log("#"+$("#col").val());
+				iNettuts.addWidget("#"+$("#col").val(), {
+					
+					id: "widget"+i,
+					color: "color-blue",
+					title: "widget "+i
+				})
+			}              
+		</script>
+
+		<div id="dialog" title="Add Widget" style="display: none">
+			<form id='addWidgetForm' method="post">
+				<table>
+					<tr>
+						<td>Title:</td>
+						<td><input type='text' id='title' name='title'></input></td>
+					</tr>
+					<tr>
+						<td>Url:</td>
+						<td><input type='text' id='url' name='url'></input></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="search">
+			<table width="100%" border="1">
+				<tr>
+					<td style="width: 200px">
+
+					</td>
+					<td style="width: 550px">
+						<form action="https://www.google.se/search" method="get">
+							<input id="gbqfq"  name="q" type="text" autocomplete="off"  style="outline: none;"></input>
+						</form>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+
+
+		</div>
+		<div id="head">
+			<div class="add">
+				<a onclick="AddWidget();">Add widget</a>  
+			</div>
+		</div>
+		<div id="columns">
+			<ul id="column1" class="column"></ul>
+			<ul id="column2" class="column"></ul>
+			<ul id="column3" class="column"></ul>
+		</div>
+
+		<script type="text/javascript" src="inettuts.js"></script>
+
+	</body>
+</html>
