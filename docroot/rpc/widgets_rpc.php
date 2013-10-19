@@ -18,8 +18,9 @@ mysql_connect($server, $user, $password);
 mysql_select_db($database);
 
 
-$rs = mysql_query("SELECT url FROM $table where id = '{$id}'");
+$rs = mysql_query("SELECT url, IFNULL(nr_of_articles, 10) nr_of_articles FROM $table where id = '{$id}'");
 $row = mysql_fetch_row($rs);
+
 set_error_handler("error_handler");
 function error_handler(){}
 try{
@@ -31,7 +32,6 @@ catch(Exception $e){
 	die;
 }
 $html = "";
-$num = 0;
 foreach($x->channel->item as $entry){
 	$html .= "
 		<div class='RssEntry'>
@@ -46,7 +46,7 @@ foreach($x->channel->item as $entry){
 			</div>
 		</div>";
 	++$num;
-	if($num == 9)
+	if($num == $row[1])
 		break;
 }
 

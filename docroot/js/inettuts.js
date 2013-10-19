@@ -26,21 +26,19 @@ var iNettuts = {
 		widgetIndividual : {}
 	},
 
-	init : function () {
-		this.attachStylesheet('inettuts.js.css');
-		$('body').css({
-			background:'#fff'
-		});
+	init : function (callback) {
+		this.attachStylesheet('css/inettuts.js.css');
 		$(this.settings.columns).css({
 			visibility:'visible'
 		});
 		this.sortWidgets();
 		this.addWidgetControls();
 		this.makeSortable();
-		this.addToggle();
+		this.addEvents();
+		callback();
 	},
 	
-	addToggle: function(){
+	addEvents: function(){
 		$(".fmaxbox").live("click", function(e){
 			e.preventDefault();
 			var span = $(this).closest(".RssEntry").find(".fmaxbox");
@@ -60,16 +58,35 @@ var iNettuts = {
 		$(this.settings.widgetSelector).live("mouseout", function(){
 			$(this).removeClass("mhover");
 		});
+		
+		$(".cancel").live("click", function(){
+			$(this).parents().find('.edit-box').slideUp();
+		});
+		$(".save").live("click", function(){
+			var id = $(this).parents().find('.widget').attr("id");
+			$.get("rpc/saveToDB.php", {
+				nr_of_articles:$(this).parents().find('.edit-box .nr_of_art').val(),
+				id: id
+			}).done(function(){
+				$("#"+id+" "+iNettuts.settings.contentSelector).html(iNettuts.settings.widgetDefault.content);
+				iNettuts.loadWidget(id);
+			})
+			$(this).parents().find('.edit-box').slideUp();
+		});
 	},
 	
 	initWidget : function (opt) {
 		if (!opt.content) opt.content=iNettuts.settings.widgetDefault.content;
 		return '<li id="'+opt.id+'" class="new widget '+opt.color+'"><div class="widget-head"><h3>'+opt.title+'</h3></div><div class="widget-content">'+opt.content+'</div></li>';
 	},
-    
+    loadWidgets: function(){
+		$(iNettuts.settings.widgetSelector).each(function(){
+			iNettuts.loadWidget($(this).attr("id"));
+		});
+	},
 	loadWidget : function(id) {
 		
-		$.post("widgets_rpc.php", {
+		$.post("rpc/widgets_rpc.php", {
 			"id":id
 		},
 		function(data){
@@ -97,7 +114,7 @@ var iNettuts = {
 	},
     
 	removefromDB: function(id){
-		$.get("removeWidget.php", {
+		$.get("rpc/removeWidget.php", {
 			id: id
 		});
 	},
@@ -111,7 +128,7 @@ var iNettuts = {
 
 			var thisWidgetSettings = iNettuts.getWidgetSettings(this.id);
 			if (thisWidgetSettings.removable) {
-				$('<a href="#" class="remove">CLOSE</a>').mousedown(function (e) {
+				$('<a href="#" class="remove"></a>').mousedown(function (e) {
 					e.stopPropagation();    
 				}).click(function () {
 					if(confirm('This widget will be removed, ok?')) {
@@ -132,47 +149,23 @@ var iNettuts = {
 			}
 			
 			if (thisWidgetSettings.editable) {
-				$('<a href="#" class="edit">EDIT</a>').mousedown(function (e) {
+				$('<a href="#" class="edit"></a>').mousedown(function (e) {
 					e.stopPropagation();    
 				}).toggle(function () {
-					$(this).css({})
-					.parents(settings.widgetSelector)
-					.find('.edit-box').show();
+					$(this).parents(settings.widgetSelector).find('.edit-box').slideDown();
 					return false;
 				},
 				function () {
-					$(this).css({})
-					.parents(settings.widgetSelector)
-					.find('.edit-box').hide();
+					$(this).parents(settings.widgetSelector).find('.edit-box').slideUp();
 					return false;
 				}).appendTo($(settings.handleSelector,this));
-					$('<div class="edit-box" style="display:none;"/>').load("editContent.php", {id: $(this).attr("id")})
-					.insertAfter($(settings.handleSelector,this));
+				$('<div class="edit-box" style="display:none;"/>').load("rpc/editContent.php", {
+					id: $(this).attr("id")
+				})
+				.insertAfter($(settings.handleSelector,this));
 			}
             
 		});
-        
-		$('.edit-box').each(function () {
-			$('input',this).keyup(function () {
-				$(this).parents(settings.widgetSelector).find('h3').text( $(this).val().length>20 ? $(this).val().substr(0,20)+'...' : $(this).val() );
-				iNettuts.savePreferences();
-			});
-			$('ul.colors li',this).click(function () {
-                
-				var colorStylePattern = /\bcolor-[\w]{1,}\b/,
-				thisWidgetColorClass = $(this).parents(settings.widgetSelector).attr('class').match(colorStylePattern)
-				if (thisWidgetColorClass) {
-					$(this).parents(settings.widgetSelector)
-					.removeClass(thisWidgetColorClass[0])
-					.addClass($(this).attr('class').match(colorStylePattern)[0]);
-					/* Save prefs to cookie: */
-					iNettuts.savePreferences();
-				}
-				return false;
-                
-			});
-		});
-        
 	},
     
 	attachStylesheet : function (href) {
@@ -270,7 +263,7 @@ var iNettuts = {
 		});
         
 		/* AJAX call to store string on database */
-		$.post("iNettuts_rpc.php","value="+cookieString);
+		$.post("rpc/iNettuts_rpc.php","value="+cookieString);
         
 	},
     
@@ -289,8 +282,11 @@ var iNettuts = {
 			return;
 		}
         
-		$.post("iNettuts_rpc.php", "",
-			function(data){
+		
+		$.ajax({
+			url: "rpc/iNettuts_rpc.php",
+			async: false,
+			success:function(data){
         
 				var cookie=data;
               
@@ -338,14 +334,24 @@ var iNettuts = {
 					visibility:'visible'
 				});
               
-				iNettuts.addWidgetControls();
+				//iNettuts.addWidgetControls();
 				iNettuts.makeSortable();
               
-			});
+			}
+		});
 
-	}
+}
   
 };
 
-iNettuts.init();
+
+
+$(document).ready(function(){
+	
+	iNettuts.init(function(){	
+		//setInterval(function(){iNettuts.loadWidgets()}, 3000);
+	});
+
+
+});
 
