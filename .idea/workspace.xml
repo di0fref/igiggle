@@ -35,6 +35,8 @@
     <file path="/inettuts.js" changelist="94993599-282d-44ee-b3e2-b032d7c35685" time="1382212290620" ignored="false" />
     <file path="/a.css" changelist="94993599-282d-44ee-b3e2-b032d7c35685" time="1382215227123" ignored="false" />
     <file path="/dummy.txt" changelist="94993599-282d-44ee-b3e2-b032d7c35685" time="1382225046837" ignored="false" />
+    <file path="/db.php" changelist="94993599-282d-44ee-b3e2-b032d7c35685" time="1382225933076" ignored="false" />
+    <file path="/iNettuts_rpc.php" changelist="94993599-282d-44ee-b3e2-b032d7c35685" time="1382225987425" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,16 +56,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docroot/index.php">
+      <file leaf-file-name="db.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docroot/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="66" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.458194">
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1382224846000" expanded="true" signature="888:908" placeholder="{...}" />
-              </folding>
+            <state line="7" column="26" selection-start="120" selection-end="133" vertical-scroll-proportion="-4.6666665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iNettuts_rpc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docroot/rpc/iNettuts_rpc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="21" selection-start="91" selection-end="91" vertical-scroll-proportion="-3.3333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="removeWidget.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docroot/rpc/removeWidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="21" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveToDB.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docroot/rpc/saveToDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="21" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addWidget.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docroot/rpc/addWidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-2.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,34 +104,7 @@
       <file leaf-file-name="editContent.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docroot/rpc/editContent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-ui.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docroot/css/jquery-ui.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1810" column="0" selection-start="33706" selection-end="34144" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inettuts.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docroot/css/inettuts.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="22" selection-start="3328" selection-end="3328" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rss.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docroot/css/rss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="204" column="13" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="30" selection-end="51" vertical-scroll-proportion="-2.0">
               <folding />
             </state>
           </provider>
@@ -107,16 +113,16 @@
       <file leaf-file-name="getAddwidgetForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docroot/rpc/getAddwidgetForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addWidget.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docroot/js/addWidget.js">
+      <file leaf-file-name="widgets_rpc.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docroot/rpc/widgets_rpc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="32" selection-start="541" selection-end="541" vertical-scroll-proportion="-15.230769">
+            <state line="9" column="21" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2651391">
               <folding />
             </state>
           </provider>
@@ -129,15 +135,6 @@
               <folding>
                 <marker date="1382212550000" expanded="false" signature="4782:4795" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgets_rpc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docroot/rpc/widgets_rpc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -178,12 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/docroot/rpc/addWidget.php" />
-        <option value="$PROJECT_DIR$/docroot/rpc/iNettuts_rpc.php" />
-        <option value="$PROJECT_DIR$/docroot/rpc/widgets_rpc.php" />
-        <option value="$PROJECT_DIR$/docroot/js/jquery-autocomplete.js" />
-        <option value="$PROJECT_DIR$/docroot/rpc/getAddwidgetForm.php" />
-        <option value="$PROJECT_DIR$/docroot/controller.php" />
         <option value="$PROJECT_DIR$/docroot/css/rss.css" />
         <option value="$PROJECT_DIR$/docroot/css/jquery-ui.css.xsl" />
         <option value="$PROJECT_DIR$/docroot/css/jquery-ui.css" />
@@ -191,9 +182,15 @@
         <option value="$PROJECT_DIR$/docroot/js/jquery-ui.js" />
         <option value="$PROJECT_DIR$/docroot/js/jquery.googleSuggest.js" />
         <option value="$PROJECT_DIR$/docroot/js/addWidget.js" />
-        <option value="$PROJECT_DIR$/docroot/rpc/editContent.php" />
         <option value="$PROJECT_DIR$/docroot/css/inettuts.css" />
         <option value="$PROJECT_DIR$/docroot/index.php" />
+        <option value="$PROJECT_DIR$/docroot/db.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/editContent.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/addWidget.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/iNettuts_rpc.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/removeWidget.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/saveToDB.php" />
+        <option value="$PROJECT_DIR$/docroot/rpc/widgets_rpc.php" />
       </list>
     </option>
   </component>
@@ -394,7 +391,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1260" height="732" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -479,35 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/addWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/addWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="764" column="9" selection-start="26312" selection-end="26312" vertical-scroll-proportion="0.3504587" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/widgets_rpc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/getAddwidgetForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docroot/css/rss.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="204" column="13" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
@@ -515,21 +483,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/addWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="89" selection-start="508" selection-end="508" vertical-scroll-proportion="-14.666667" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docroot/css/jquery-ui.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1810" column="0" selection-start="33706" selection-end="34144" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/iNettuts_rpc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.2278481" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docroot/js/jquery-ui.js">
@@ -560,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docroot/rpc/editContent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docroot/css/inettuts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="185" column="22" selection-start="3328" selection-end="3328" vertical-scroll-proportion="0.0">
@@ -576,13 +527,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docroot/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="66" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.458194">
+        <state line="34" column="66" selection-start="1365" selection-end="1365" vertical-scroll-proportion="-10.148149">
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1382224846000" expanded="true" signature="888:908" placeholder="{...}" />
+            <marker date="1382224846000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="120" selection-end="133" vertical-scroll-proportion="-4.6666665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/addWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="-2.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/editContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="30" selection-end="51" vertical-scroll-proportion="-2.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/getAddwidgetForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/iNettuts_rpc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="91" selection-end="91" vertical-scroll-proportion="-3.3333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/removeWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/saveToDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.3333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docroot/rpc/widgets_rpc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2651391">
+          <folding />
         </state>
       </provider>
     </entry>
