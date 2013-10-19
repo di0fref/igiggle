@@ -59,7 +59,7 @@
       <file leaf-file-name="db.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.170347">
+            <state line="4" column="22" selection-start="70" selection-end="70" vertical-scroll-proportion="0.11356467">
               <folding />
             </state>
           </provider>
@@ -327,7 +327,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.170347">
+        <state line="4" column="22" selection-start="70" selection-end="70" vertical-scroll-proportion="0.11356467">
           <folding />
         </state>
       </provider>
