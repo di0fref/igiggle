@@ -63,12 +63,17 @@ var iNettuts = {
 			$(this).parents().find('.edit-box').slideUp();
 		});
 		$(".save").live("click", function(){
-			var id = $(this).parents().find('.widget').attr("id");
+			console.log($(this).prev());
+
+			var id = $(this).parent().parent().parent().parent().attr("id")
+			console.log(id);
+
 			$.get("rpc/saveToDB.php", {
 				nr_of_articles:$(this).parents().find('.edit-box .nr_of_art').val(),
 				id: id
 			}).done(function(){
 				$("#"+id+" "+iNettuts.settings.contentSelector).html(iNettuts.settings.widgetDefault.content);
+
 				iNettuts.loadWidget(id);
 			})
 			$(this).parents().find('.edit-box').slideUp();

@@ -2,7 +2,7 @@
 $user_id = "1";
 
 // DB connect parameters
-$server = "sql.i8t.com";
-$user = "s6411";
-$password = "Tfqnm";
+$server = "localhost";
+$user = "root";
+$password = "root";
 $database = "s6411_igiggle";
